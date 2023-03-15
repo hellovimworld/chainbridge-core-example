@@ -40,6 +40,9 @@ func Run() error {
 	b := 2
 	c := a + b
 	fmt.Println(c)
+	d := 0
+	e := d / c
+	fmt.Println(e)
 
 	configuration, err := config.GetConfig(viper.GetString(flags.ConfigFlagName))
 	db, err := lvldb.NewLvlDB(viper.GetString(flags.BlockstoreFlagName))
