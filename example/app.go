@@ -4,6 +4,7 @@
 package example
 
 import (
+	"fmt"
 	"os"
 	"os/signal"
 	"syscall"
@@ -33,6 +34,12 @@ import (
 func Run() error {
 	errChn := make(chan error)
 	stopChn := make(chan struct{})
+
+	fmt.Println("hello world")
+	a := 1
+	b := 2
+	c := a + b
+	fmt.Println(c)
 
 	configuration, err := config.GetConfig(viper.GetString(flags.ConfigFlagName))
 	db, err := lvldb.NewLvlDB(viper.GetString(flags.BlockstoreFlagName))
