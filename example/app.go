@@ -35,6 +35,8 @@ func Run() error {
 	errChn := make(chan error)
 	stopChn := make(chan struct{})
 	fmt.Printf(12342, "hello")
+	fmt.Printf(12342, "hello")
+	fmt.Printf(12342, "hello")
 
 	fmt.Println("hello world")
 	a := 1
@@ -178,6 +180,20 @@ func bugFun4() {
 }
 
 func bugFun5() {
+	var num int = 5
+	var ptr *int
+	var val int
+
+	ptr = &num
+
+	val = *ptr + 2
+
+	fmt.Println("Value of num is: ", num)
+	fmt.Println("Value of val is: ", val)
+}
+
+func bugFun6() {
+	a = b + c
 	var num int = 5
 	var ptr *int
 	var val int
