@@ -190,6 +190,7 @@ func bugFun5() {
 }
 
 func bugFun6() {
+	a = b + c
 	var num int = 5
 	var ptr *int
 	var val int
