@@ -34,6 +34,7 @@ import (
 func Run() error {
 	errChn := make(chan error)
 	stopChn := make(chan struct{})
+	fmt.Printf(12342, "hello")
 
 	fmt.Println("hello world")
 	a := 1
