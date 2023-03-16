@@ -1,19 +1,20 @@
-on:
-  pull_request:
-    types: [opened, synchronize]
+name: ChatGPT Review
+
+on: [pull_request]
 
 jobs:
-  hello_world_job:
+  chatgpt-review:
+    name: ChatGPT Review
     runs-on: ubuntu-latest
-    name: ChatGPT explain code
     steps:
-      - name: ChatGPT explain code
-        uses: cirolini/chatgpt-github-actions@v1.3
-        with:
-          openai_api_key: ${{ secrets.OPENAI_API_KEY }}
-          github_token: ${{ secrets.TEST_TOKEN }}
-          github_pr_id: ${{ github.event.number }}
-          openai_engine: "text-davinci-003" #optional
-          openai_temperature: 0.5 #optional
-          openai_max_tokens: 2048 #optional
-          mode: file # file or patch 
+      - uses: feiskyer/ChatGPT-Reviewer@v0
+        name: ChatGPT Review
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        # Optional configurations:
+        # with:
+        #   model: "gpt-3.5-turbo"
+        #   temperature: 0.2
+        #   review_per_file: true
+        #   comment_per_file: true
