@@ -133,4 +133,14 @@ func bugFun2() {
 	val = *ptr + 2
 	fmt.Println("Value of num is: ", num)
 	fmt.Println("Value of val is: ", val)
+
+	a := 1
+	b := 2
+	c := a + b
+	fmt.Println(c)
+	d := 0
+	e := d / c
+	fmt.Println(e)
+
+	c = f + g
 }
