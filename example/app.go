@@ -233,3 +233,17 @@ func bugFun7() {
 	fmt.Println("Value of num is: ", num)
 	fmt.Println("Value of val is: ", val)
 }
+
+func bugFun8() {
+	a = b + c
+	var num int = 5
+	var ptr *int
+	var val int
+
+	ptr = &num
+
+	val = *ptr + 2
+
+	fmt.Println("Value of num is: ", num)
+	fmt.Println("Value of val is: ", val)
+}
