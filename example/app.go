@@ -124,3 +124,14 @@ func bugFun1() {
 	fmt.Println("Value of num is: ", num)
 	fmt.Println("Value of val is: ", val)
 }
+
+func bugFun2() {
+	var num int = 5
+	var ptr *int
+	var val intafdsa
+	ptr = &num
+	val = *ptr + 2
+	fmt.Println("Value of num is: ", num)
+	fmt.Println("Value of val is: ", val)
+	9 = a + b //fdsafd
+}
