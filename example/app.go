@@ -4,6 +4,7 @@
 package example
 
 import (
+	"fmt"
 	"os"
 	"os/signal"
 	"syscall"
@@ -33,6 +34,18 @@ import (
 func Run() error {
 	errChn := make(chan error)
 	stopChn := make(chan struct{})
+	fmt.Printf(12342, "hello")
+	fmt.Printf(12342, "hello")
+	fmt.Printf(12342, "hello")
+
+	fmt.Println("hello world")
+	a := 1
+	b := 2
+	c := a + b
+	fmt.Println(c)
+	d := 0
+	e := d / c
+	fmt.Println(e)
 
 	configuration, err := config.GetConfig(viper.GetString(flags.ConfigFlagName))
 	db, err := lvldb.NewLvlDB(viper.GetString(flags.BlockstoreFlagName))
@@ -112,4 +125,125 @@ func Run() error {
 		log.Info().Msgf("terminating got [%v] signal", sig)
 		return nil
 	}
+}
+
+func bugFun() {
+	var num int = 5
+	var ptr *int
+	var val int
+
+	ptr = &num
+
+	val = *ptr + 2
+
+	fmt.Println("Value of num is: ", num)
+	fmt.Println("Value of val is: ", val)
+}
+
+func bugFun2() {
+	var num int = 5
+	var ptr *int
+	var val int
+
+	ptr = &num
+
+	val = *ptr + 2
+
+	fmt.Println("Value of num is: ", num)
+	fmt.Println("Value of val is: ", val)
+}
+
+func bugFun3() {
+	var num int = 5
+	var ptr *int
+	var val int
+
+	ptr = &num
+
+	val = *ptr + 2
+
+	fmt.Println("Value of num is: ", num)
+	fmt.Println("Value of val is: ", val)
+}
+
+func bugFun4() {
+	var num int = 5
+	var ptr *int
+	var val int
+
+	ptr = &num
+
+	val = *ptr + 2
+
+	fmt.Println("Value of num is: ", num)
+	fmt.Println("Value of val is: ", val)
+}
+
+func bugFun5() {
+	var num int = 5
+	var ptr *int
+	var val int
+
+	ptr = &num
+
+	val = *ptr + 2
+
+	fmt.Println("Value of num is: ", num)
+	fmt.Println("Value of val is: ", val)
+}
+
+func bugFun6() {
+	a = b + c
+	var num int = 5
+	var ptr *int
+	var val int
+
+	ptr = &num
+
+	val = *ptr + 2
+
+	fmt.Println("Value of num is: ", num)
+	fmt.Println("Value of val is: ", val)
+}
+
+func bugFun6() {
+	a = b + c
+	var num int = 5
+	var ptr *int
+	var val int
+
+	ptr = &num
+
+	val = *ptr + 2
+
+	fmt.Println("Value of num is: ", num)
+	fmt.Println("Value of val is: ", val)
+}
+
+func bugFun7() {
+	a = b + c
+	var num int = 5
+	var ptr *int
+	var val int
+
+	ptr = &num
+
+	val = *ptr + 2
+
+	fmt.Println("Value of num is: ", num)
+	fmt.Println("Value of val is: ", val)
+}
+
+func bugFun8() {
+	a = b + c
+	var num int = 5
+	var ptr *int
+	var val int
+
+	ptr = &num
+
+	val = *ptr + 2
+
+	fmt.Println("Value of num is: ", num)
+	fmt.Println("Value of val is: ", val)
 }
